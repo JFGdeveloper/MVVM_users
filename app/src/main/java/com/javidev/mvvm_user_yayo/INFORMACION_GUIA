@@ -2,5 +2,5 @@ REBISAR Y AÑADIR LAS LIBRERIAS NECESAREAS
 HILT,
 
 2_Genero una clase general para toda la app con hilt
-sera myAplication
+sera myAplication y añadir el name en el manifest
 añado etiqueta entrypoing a my activity
