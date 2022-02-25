@@ -1,0 +1,6 @@
+REBISAR Y AÑADIR LAS LIBRERIAS NECESAREAS
+HILT,
+
+2_Genero una clase general para toda la app con hilt
+sera myAplication
+añado etiqueta entrypoing a my activity
