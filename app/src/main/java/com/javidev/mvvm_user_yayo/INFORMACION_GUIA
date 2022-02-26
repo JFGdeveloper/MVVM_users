@@ -1,6 +1,18 @@
 REBISAR Y AÑADIR LAS LIBRERIAS NECESAREAS
-HILT,
+HILT, retrofit,
+
+api a consultar: randomuserme
 
 2_Genero una clase general para toda la app con hilt
 sera myAplication y añadir el name en el manifest
 añado etiqueta entrypoing a my activity
+
+3- Creamos la capa modelo
+creo los modelos o mock: apiresponse, userlocation,username,userimagen
+
+4- librerias de retrofit
+5- creamos las apisDataSource
+6- creamos la carpeta di con las instancias de retrofit
+7- creamos el repositorio
+
+
