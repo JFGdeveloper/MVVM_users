@@ -1,6 +1,8 @@
 package com.javidev.mvvm_user_yayo.di
 
 import com.javidev.mvvm_user_yayo.dataLayer.dataSource.RestDataSource_
+import com.javidev.mvvm_user_yayo.dataLayer.repository.UserRepositoryImpl
+import com.javidev.mvvm_user_yayo.dataLayer.repository.UserRepository_
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -10,33 +12,16 @@ import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Named
 import javax.inject.Singleton
 
-// 6 cramos la carperta di
+// 7 cramos la carperta di
 // al ser un modulo instalado en singletoncomponent
 // puedo usar los metodos en toda la app
 
 @Module
 @InstallIn(SingletonComponent::class)
-class DataSourceModule {
+abstract class RepositoryModule {
 
     @Singleton
     @Provides
-    @Named("BaseUrl")
-    fun provideBaseUrl() = "https://randomuser.me/api/"
-
-    @Singleton
-    @Provides
-    fun provideRetrofit(@Named("BaseUrl") baseUrl: String): Retrofit{
-        return Retrofit.Builder()
-            .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl(baseUrl)
-            .build()
-    }
-
-
-    @Singleton
-    @Provides
-    fun getRestDataSource(retrofit: Retrofit): RestDataSource_ =
-        retrofit.create(RestDataSource_::class.java)
-
+    abstract fun userRepositoty(repo: UserRepositoryImpl): UserRepository_
 
 }

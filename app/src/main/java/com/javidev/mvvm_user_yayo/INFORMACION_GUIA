@@ -14,5 +14,6 @@ creo los modelos o mock: apiresponse, userlocation,username,userimagen
 5- creamos las apisDataSource
 6- creamos la carpeta di con las instancias de retrofit
 7- creamos el repositorio
+8- creamos el repositorio de hil userMODEL
 
 

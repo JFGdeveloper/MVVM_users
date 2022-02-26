@@ -5,7 +5,7 @@ import retrofit2.http.GET
 
 // peticiones a la api como necesito 3 diseño 3
 
-interface RestDataSource {
+interface RestDataSource_ {
     @GET("?inc=name")
     suspend fun getUserName(): ApiResponse
 
