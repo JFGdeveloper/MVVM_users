@@ -14,12 +14,18 @@ interface UserRepository_{
 
 class UserRepositoryImpl
 @Inject constructor(private val dataSource: RestDataSource_): UserRepository_ {
+
     override suspend fun getNewUser(): User {
-        val name = dataSource.getUserName().result[0].name!!
-        val location = dataSource.getUserLocation().result[0].location!!
-        val picture = dataSource.getUserPicture().result[0].picture!!
-        val user = User(name = name.first, lastname = name.last,city = location.city, thumbnail = picture.thumbnail  )
-        return  user
+        val name = dataSource.getUserName().results[0].name!!
+        val location = dataSource.getUserLocation().results[0].location!!
+        val picture = dataSource.getUserPicture().results[0].picture!!
+
+        return User(
+            name = name.first,
+            lastname = name.last,
+            city = location.city,
+            thumbnail = picture.thumbnail
+        )
     }
 }
 

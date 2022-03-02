@@ -3,6 +3,7 @@ package com.javidev.mvvm_user_yayo.di
 import com.javidev.mvvm_user_yayo.dataLayer.dataSource.RestDataSource_
 import com.javidev.mvvm_user_yayo.dataLayer.repository.UserRepositoryImpl
 import com.javidev.mvvm_user_yayo.dataLayer.repository.UserRepository_
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -21,7 +22,7 @@ import javax.inject.Singleton
 abstract class RepositoryModule {
 
     @Singleton
-    @Provides
+    @Binds  // no puede ser provide al ser abstracta
     abstract fun userRepositoty(repo: UserRepositoryImpl): UserRepository_
 
 }

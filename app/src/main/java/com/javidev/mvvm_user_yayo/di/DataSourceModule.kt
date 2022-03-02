@@ -35,7 +35,7 @@ class DataSourceModule {
 
     @Singleton
     @Provides
-    fun getRestDataSource(retrofit: Retrofit): RestDataSource_ =
+    fun restDataSource(retrofit: Retrofit): RestDataSource_ =
         retrofit.create(RestDataSource_::class.java)
 
 

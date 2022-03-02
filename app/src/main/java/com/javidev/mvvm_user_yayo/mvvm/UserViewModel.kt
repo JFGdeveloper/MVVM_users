@@ -1,5 +1,6 @@
 package com.javidev.mvvm_user_yayo.mvvm
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.javidev.mvvm_user_yayo.dataLayer.repository.UserRepository_
@@ -13,13 +14,13 @@ import javax.inject.Inject
 // tengo que crear aqui los metodos para llamar a los repositoris
 // se hace en una corrutina
 @HiltViewModel
-class ViewModel
+class UserViewModel
 @Inject constructor( private val userRepositoryImpl: UserRepository_): ViewModel()
 {
     fun getUser(){
         viewModelScope.launch(Dispatchers.IO){
             val user = userRepositoryImpl.getNewUser()
-            print("EL USUARIO LLAMADO EN VIEWMODEL ES: $user")
+            Log.d("viewModel",user.toString())
         }
 
     }
