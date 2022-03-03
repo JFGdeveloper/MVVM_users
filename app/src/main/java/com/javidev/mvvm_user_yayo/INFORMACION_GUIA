@@ -18,5 +18,6 @@ creo los modelos o mock: apiresponse, userlocation,username,userimagen
 9- instalamos la libreria para romm en gradle
 10- hacemos que el user se convierta en una tabla de romm
 11- creamos la base de datos que se llamara dbDataSource
+12- inyecto en el repo el Dao y creo sus metodos
 
 
