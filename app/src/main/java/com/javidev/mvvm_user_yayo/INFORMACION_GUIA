@@ -1,5 +1,5 @@
 REBISAR Y AÑADIR LAS LIBRERIAS NECESAREAS
-HILT, retrofit,
+HILT, retrofit,romm
 
 api a consultar: randomuserme
 
@@ -15,5 +15,8 @@ creo los modelos o mock: apiresponse, userlocation,username,userimagen
 6- creamos la carpeta di con las instancias de retrofit
 7- creamos el repositorio
 8- creamos el repositorio de hil userMODEL
+9- instalamos la libreria para romm en gradle
+10- hacemos que el user se convierta en una tabla de romm
+11- creamos la base de datos que se llamara dbDataSource
 
 
