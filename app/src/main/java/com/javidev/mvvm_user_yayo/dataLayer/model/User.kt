@@ -19,7 +19,7 @@ data class User(
 @Dao
 interface UserDao_{
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(user: User)
 
     @Query("SELECT * FROM user ORDER BY id DESC  ")

@@ -50,10 +50,12 @@ class DataSourceModule {
     @Singleton
     @Provides
     fun dbDataSource(@ApplicationContext context: Context): DbDataSource{
-        return Room.databaseBuilder(context,DbDataSource::class.java,"user_dataSource")
+        return Room.databaseBuilder(context,DbDataSource::class.java,"user_database")
             .fallbackToDestructiveMigration()
             .build()
     }
+
+
 
     // devuelve un userDao de la bd que he creado
     @Singleton
