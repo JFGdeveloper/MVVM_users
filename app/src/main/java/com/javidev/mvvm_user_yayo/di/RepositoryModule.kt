@@ -23,6 +23,6 @@ abstract class RepositoryModule {
 
     @Singleton
     @Binds  // no puede ser provide al ser abstracta
-    abstract fun userRepositoty(repo: UserRepositoryImpl): UserRepository_
+    abstract fun userRepository(repo: UserRepositoryImpl): UserRepository_
 
 }

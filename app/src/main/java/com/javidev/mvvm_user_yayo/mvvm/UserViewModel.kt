@@ -18,9 +18,9 @@ import javax.inject.Inject
 // se hace en una corrutina
 @HiltViewModel
 class UserViewModel
-@Inject constructor( private val userRepositoryImpl: UserRepository_): ViewModel()
+@Inject
+constructor( private val userRepositoryImpl: UserRepository_): ViewModel()
 {
-
 
     fun getUser(){
         viewModelScope.launch(Dispatchers.IO){
