@@ -21,21 +21,18 @@ class UserRepositoryImpl
     private val dataSource: RestDataSource_,
     private val userDao: UserDao_
     ): UserRepository_ {
-
-    // llama a la api y lo guarda en Room
     override suspend fun getNewUser(): User {
-        val name = dataSource.getUserName().results[0].name!!
-        val location = dataSource.getUserLocation().results[0].location!!
-        val picture = dataSource.getUserPicture().results[0].picture!!
-        val user = User(name = name.first, lastname = name.last, city = location.city, thumbnail = picture.thumbnail)
-        userDao.insert(user) // al obtenerla de la api la guardo en Room
-        return user
+        TODO("Not yet implemented")
     }
 
-    // borra de Room
-    override suspend fun deleteUser(toDelete: User) = userDao.delete(toDelete)
+    override suspend fun deleteUser(toDelete: User) {
+        TODO("Not yet implemented")
+    }
 
-    // devuelve una lista de Room
-    override fun getAll(): LiveData<List<User>> = userDao.getAll()
+    override fun getAll(): LiveData<List<User>> {
+        TODO("Not yet implemented")
+    }
+
+
 }
 
