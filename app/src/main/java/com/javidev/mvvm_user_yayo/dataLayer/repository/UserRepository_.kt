@@ -1,7 +1,6 @@
 package com.javidev.mvvm_user_yayo.dataLayer.repository
 
 import androidx.lifecycle.LiveData
-import androidx.room.Delete
 import com.javidev.mvvm_user_yayo.dataLayer.dataSource.RestDataSource_
 import com.javidev.mvvm_user_yayo.dataLayer.model.User
 import com.javidev.mvvm_user_yayo.dataLayer.model.UserDao_
