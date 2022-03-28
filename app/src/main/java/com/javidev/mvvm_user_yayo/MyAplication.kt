@@ -5,5 +5,4 @@ import dagger.hilt.android.HiltAndroidApp
 
 // 2 genero la clase general para hilt
 @HiltAndroidApp
-class MyAplication: Application() {
-}
+class MyApplication : Application()

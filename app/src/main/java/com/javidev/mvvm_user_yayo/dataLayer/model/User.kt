@@ -7,22 +7,22 @@ import androidx.room.*
 
 @Entity(tableName = "user")
 data class User(
-    @ColumnInfo(name = "name")val name: String,
-    @ColumnInfo(name = "lastname")val lastname: String,
-    @ColumnInfo(name = "city")val city: String,
-    @ColumnInfo(name = "thumbnail")val thumbnail: String,
-    @PrimaryKey(autoGenerate = true )val id: Int = 0
+    @ColumnInfo(name = "name") val name: String,
+    @ColumnInfo(name = "lastName") val lastName: String,
+    @ColumnInfo(name = "city") val city: String,
+    @ColumnInfo(name = "thumbnail") val thumbnail: String,
+    @PrimaryKey(autoGenerate = true) var id: Int = 0
 )
 
 // PARA ACCEDER A LA TABLA NECESITO UN DAO Y SERA UN INTERFACE
 
 @Dao
-interface UserDao_{
+interface UserDao{
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(user: User)
 
-    @Query("SELECT * FROM user ORDER BY id DESC  ")
+    @Query("SELECT * FROM user ORDER BY id DESC")
     fun getAll(): LiveData<List<User>>
 
     @Delete

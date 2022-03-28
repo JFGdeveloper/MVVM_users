@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.Room
 import com.javidev.mvvm_user_yayo.dataLayer.dataSource.DbDataSource
 import com.javidev.mvvm_user_yayo.dataLayer.dataSource.RestDataSource_
-import com.javidev.mvvm_user_yayo.dataLayer.model.UserDao_
+import com.javidev.mvvm_user_yayo.dataLayer.model.UserDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -47,23 +47,20 @@ class DataSourceModule {
     // INYECCIONES PARA ROMM
 
     // con esto instancio la bd de romm que yo he creado
+
     @Singleton
     @Provides
-    fun dbDataSource(@ApplicationContext context: Context): DbDataSource{
-        return Room.databaseBuilder(context,DbDataSource::class.java,"user_database")
+    fun dbDataSource(@ApplicationContext context: Context): DbDataSource {
+        return Room.databaseBuilder(context, DbDataSource::class.java, "user_database")
             .fallbackToDestructiveMigration()
             .build()
     }
 
 
-
     // devuelve un userDao de la bd que he creado
     @Singleton
     @Provides
-    fun userDao(db: DbDataSource): UserDao_ = db.userDao()
-
-
-
+    fun userDao(db: DbDataSource): UserDao = db.userDao()
 
 
 }

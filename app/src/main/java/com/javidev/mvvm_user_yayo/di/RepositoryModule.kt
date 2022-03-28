@@ -21,8 +21,9 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 abstract class RepositoryModule {
 
-    @Singleton
-    @Binds  // no puede ser provide al ser abstracta
+
+    @Binds
+    @Singleton// no puede ser provide al ser abstracta
     abstract fun userRepository(repo: UserRepositoryImpl): UserRepository_
 
 }
