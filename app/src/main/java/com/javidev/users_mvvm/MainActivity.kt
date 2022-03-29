@@ -109,8 +109,8 @@ fun MyApp(
                             painter = rememberImagePainter(
                                 data = user.thumbnail,
                                 builder = {
-                                    placeholder(R.drawable.ic_launcher_foreground)
-                                    error(R.drawable.ic_launcher_foreground)
+                                    placeholder(R.drawable.icons8_wifi_apagado_64)
+                                    error(R.drawable.icons8_wifi_apagado_64)
                                 }
                             ),
                             contentDescription = null,
